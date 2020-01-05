@@ -1,4 +1,4 @@
 {
-  "editor.formatOnSave":true,
-  "prettier.eslintInt":true
+  "editor.formatOnSave": false,
+  "prettier.eslint": true
 }
