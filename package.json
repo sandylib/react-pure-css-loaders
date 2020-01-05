@@ -1,0 +1,20 @@
+{
+  "name": "react-pure-css-loaders",
+  "version": "1.0.0",
+  "description": "react components wrapper of pure css loaders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandylib/react-pure-css-loaders.git"
+  },
+  "keywords": ["react", "react-hook", "css", "spinners", "loaders", "pure css loaders"],
+  "author": "Sandy.Z",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandylib/react-pure-css-loaders/issues"
+  },
+  "homepage": "https://github.com/sandylib/react-pure-css-loaders#readme"
+}
