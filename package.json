@@ -4,17 +4,39 @@
   "description": "react components wrapper of pure css loaders",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint 'src/**/*.js'",
+    "lint:fix": "prettier-eslint --write $PWD/'src/**/*.js'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sandylib/react-pure-css-loaders.git"
   },
-  "keywords": ["react", "react-hook", "css", "spinners", "loaders", "pure css loaders"],
+  "keywords": [
+    "react",
+    "react-hook",
+    "css",
+    "spinners",
+    "loaders",
+    "pure css loaders"
+  ],
   "author": "Sandy.Z",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sandylib/react-pure-css-loaders/issues"
   },
-  "homepage": "https://github.com/sandylib/react-pure-css-loaders#readme"
+  "homepage": "https://github.com/sandylib/react-pure-css-loaders#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0"
+  }
 }
