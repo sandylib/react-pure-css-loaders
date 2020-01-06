@@ -1,5 +1,5 @@
-import React from 'react'
+export * from './Ellipsis'
 
-export const index = () => {
-  return <h1> hi </h1>
-}
+export * from './Ring'
+
+export * from './DualRing'
