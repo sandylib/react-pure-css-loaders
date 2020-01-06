@@ -17,6 +17,7 @@
     "storybook:build": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:staged": "jest --findRelatedTests",
     "test:coverage": "jest --coverage"
   },
   "husky": {
@@ -27,6 +28,7 @@
   "lint-staged": {
     "*.js": [
       "npm run lint:fix",
+      "npm run test:staged",
       "git add"
     ]
   },
