@@ -3,4 +3,7 @@ node_modules
 dist
 
 storybook-static
+
 *.html
+
+coverage

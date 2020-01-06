@@ -5,3 +5,5 @@ dist
 *.html
 
 storybook-static
+
+coverage
