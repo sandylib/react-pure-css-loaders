@@ -1,12 +1,15 @@
 {
   "name": "react-pure-css-loaders",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react components wrapper of pure css loaders",
   "main": "dist/bundle.js",
   "module": "dist/bundle.esm.js",
   "unpkg": "dist/bundle.min.js",
   "sideEffects": [
     "*.css"
+  ],
+  "files": [
+    "dist"
   ],
   "scripts": {
     "prebuild": "rimraf dist",
@@ -21,7 +24,8 @@
     "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "predeploy": "npm run storybook:build",
-    "deploy": "gh-pages -d storybook-static"
+    "deploy": "gh-pages -d storybook-static",
+    "prepublishOnly": "npm run build"
   },
   "husky": {
     "hooks": {

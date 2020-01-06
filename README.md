@@ -5,6 +5,45 @@
 
 react components wrapper of pure css loaders
 
+--example
+
+```sh
+import { Ellipsis, Ring, DualRing } from 'react-pure-css-loaders'
+
+import '../node_modules/react-pure-css-loaders/dist/style.css'
+
+function App() {
+  return (
+    <div className="App">
+      <Ellipsis />
+      <Ring  />
+      <DualRing  />
+    </div>
+  );
+}
+
+
+
+```
+
+-- example change color
+```sh
+import { Ellipsis, Ring, DualRing } from 'react-pure-css-loaders'
+
+import '../node_modules/react-pure-css-loaders/dist/style.css'
+
+function App() {
+  return (
+    <div className="App">
+      <Ellipsis color={'white'} />
+      <Ring  color={'white'}/>
+      <DualRing  color={'white'}/>
+    </div>
+  );
+}
+
+```
+
 
 
 
