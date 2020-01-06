@@ -1,18 +1,28 @@
 import React from 'react'
-import styles from './styles.css'
+import PropTypes from 'prop-types'
+import './styles.css'
 
 const Ellipsis = props => {
+  const { color = 'black', style } = props
   return (
-    <>
-      <style>{styles}</style>
-      <div className="lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </>
+    <div
+      className="rpcl-ellipsis"
+      style={{
+        '--rpcl-ellipsis-color': color,
+        ...style
+      }}
+    >
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   )
+}
+
+Ellipsis.propTypes = {
+  color: PropTypes.string,
+  style: PropTypes.object
 }
 
 export default Ellipsis

@@ -1,13 +1,24 @@
 import React from 'react'
-import styles from './styles.css'
+import PropTypes from 'prop-types'
+import './styles.css'
 
 const DualRing = props => {
+  const { color = 'black', style } = props
+
   return (
-    <>
-      <style>{styles}</style>
-      <div className="lds-dual-ring"></div>
-    </>
+    <div
+      className="rpcl-dual-ring"
+      style={{
+        '--rpcl-dual-ring-color': color,
+        ...style
+      }}
+    ></div>
   )
+}
+
+DualRing.propTypes = {
+  color: PropTypes.string,
+  style: PropTypes.object
 }
 
 export default DualRing

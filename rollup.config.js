@@ -1,7 +1,7 @@
 import babel from 'rollup-plugin-babel'
 import resolve from '@rollup/plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
-import { string } from 'rollup-plugin-string'
+import postcss from 'rollup-plugin-postcss'
 
 const dist = 'dist'
 const bundle = 'bundle'
@@ -10,7 +10,7 @@ const production = !process.env.ROLLUP_WATCH
 
 module.exports = {
   input: 'src/index.js',
-  external: ['react'],
+  external: ['react', 'prop-types'],
   output: [
     {
       file: `${dist}/${bundle}.cjs.js`,
@@ -24,7 +24,8 @@ module.exports = {
       name: 'ReactPureCssLoaders',
       file: `${dist}/${bundle}.umd.js`,
       globals: {
-        react: 'React'
+        react: 'React',
+        'prop-types': 'PropTypes'
       },
       format: 'umd'
     }
@@ -34,8 +35,8 @@ module.exports = {
     babel({
       exclude: 'node_modules/**'
     }),
-    string({
-      include: '**/*.css'
+    postcss({
+      extract: 'dist/style.css'
     }),
     production && terser()
   ]

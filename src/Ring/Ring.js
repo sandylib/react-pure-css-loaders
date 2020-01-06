@@ -1,18 +1,27 @@
 import React from 'react'
-import styles from './styles.css'
+import PropTypes from 'prop-types'
+import './styles.css'
 
 const Ring = props => {
+  const { color = 'black', style } = props
   return (
-    <>
-      <style>{styles}</style>
-      <div className="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </>
+    <div
+      className="rpcl-ring"
+      style={{
+        '--rpcl-ring-color': color,
+        ...style
+      }}
+    >
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   )
 }
 
+Ring.propTypes = {
+  color: PropTypes.string,
+  style: PropTypes.object
+}
 export default Ring
